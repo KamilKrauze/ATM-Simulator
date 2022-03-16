@@ -16,3 +16,10 @@ C:\Users\coomb\Source\Repos\ATM-Simulator\ConsoleApplication3-1\ConsoleApplicati
 C:\Users\coomb\Source\Repos\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.csproj.CoreCompileInputs.cache
 C:\Users\coomb\Source\Repos\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.exe
 C:\Users\coomb\Source\Repos\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.pdb
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.csproj.AssemblyReference.cache
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.csproj.CoreCompileInputs.cache
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.exe
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.pdb
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\bin\x64\Debug\ConsoleApplication3.exe.config
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\bin\x64\Debug\ConsoleApplication3.exe
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\bin\x64\Debug\ConsoleApplication3.pdb

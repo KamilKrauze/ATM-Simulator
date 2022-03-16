@@ -1,0 +1,18 @@
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.exe
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.deps.json
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.runtimeconfig.json
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.runtimeconfig.dev.json
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.dll
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ref\ATM - Team 3.dll
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.pdb
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.csproj.AssemblyReference.cache
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM_Team3.ATM_form.resources
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.csproj.GenerateResource.cache
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.AssemblyInfoInputs.cache
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.AssemblyInfo.cs
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.csproj.CoreCompileInputs.cache
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.dll
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ref\ATM - Team 3.dll
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.pdb
+D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.genruntimeconfig.cache

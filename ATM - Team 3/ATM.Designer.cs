@@ -1,5 +1,5 @@
 ﻿
-namespace ConsoleApplication3
+namespace ATM_Team3
 {
     partial class ATM_form
     {
@@ -201,7 +201,7 @@ namespace ConsoleApplication3
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;

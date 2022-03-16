@@ -62,22 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="atmConsole.cs" />
-    <Compile Include="ATM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ATM.Designer.cs">
-      <DependentUpon>ATM.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ATM.resx">
-      <DependentUpon>ATM.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

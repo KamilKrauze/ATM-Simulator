@@ -35,7 +35,7 @@ namespace ConsoleApplication3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ATM_form());
+            //Application.Run(new ATM_form());
         }
     }
     /*
