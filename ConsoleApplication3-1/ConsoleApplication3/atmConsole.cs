@@ -149,7 +149,7 @@ namespace ConsoleApplication3
                 }
 
                 //wipes all text from the console
-                Console.Clear();
+                //Console.Clear();
             }
 
 

@@ -15,6 +15,13 @@ namespace ConsoleApplication3
         public Form1()
         {
             InitializeComponent();
+            this.Text = "ATM";
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
