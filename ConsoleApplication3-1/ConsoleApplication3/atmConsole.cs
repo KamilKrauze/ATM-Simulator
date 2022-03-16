@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace ConsoleApplication3
 {   
@@ -29,9 +30,12 @@ namespace ConsoleApplication3
 
         }
 
+        [STAThread]
         static void Main(string[] args)
         {
-            new Program();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ATM_form());
         }
     }
     /*
