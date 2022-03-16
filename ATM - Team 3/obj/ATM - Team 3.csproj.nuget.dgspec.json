@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# Workspace\\ATM Simulator\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {}
+    "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {}
   },
   "projects": {
-    "D:\\C# Workspace\\ATM Simulator\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {
+    "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# Workspace\\ATM Simulator\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
+        "projectUniqueName": "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
         "projectName": "ATM - Team 3",
-        "projectPath": "D:\\C# Workspace\\ATM Simulator\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
+        "projectPath": "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\C# Workspace\\ATM Simulator\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\obj\\",
+        "outputPath": "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
