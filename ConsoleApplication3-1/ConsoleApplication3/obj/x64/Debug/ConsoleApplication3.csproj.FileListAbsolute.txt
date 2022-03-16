@@ -4,3 +4,4 @@ C:\Users\Kamil Krauze\Documents\GitHub\ATM-Simulator\ConsoleApplication3-1\Conso
 C:\Users\Kamil Krauze\Documents\GitHub\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.csproj.CoreCompileInputs.cache
 C:\Users\Kamil Krauze\Documents\GitHub\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.exe
 C:\Users\Kamil Krauze\Documents\GitHub\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\obj\x64\Debug\ConsoleApplication3.pdb
+C:\Users\Kamil Krauze\Documents\GitHub\ATM-Simulator\ConsoleApplication3-1\ConsoleApplication3\bin\x64\Debug\ConsoleApplication3.exe.config
