@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication3
 {
-    public partial class Form1 : Form
+    public partial class ATM_form : Form
     {
-        public Form1()
+        public ATM_form()
         {
             InitializeComponent();
             this.Text = "ATM";
