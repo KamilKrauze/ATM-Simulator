@@ -45,7 +45,64 @@ namespace ATM_Team3
 
         }
 
+        private void button0_Click(object sender, EventArgs e)
+        {
+            input.AppendText("0");
+        }
+
         private void button1_Click(object sender, EventArgs e)
+        {
+            input.AppendText("1");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            input.AppendText("2");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            input.AppendText("3");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            input.AppendText("4");
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            input.AppendText("5");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            input.AppendText("6");
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            input.AppendText("7");
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            input.AppendText("8");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            input.AppendText("9");
+        }
+
+        private void buttonClr_Click(object sender, EventArgs e)
+        {
+            input.Clear();
+        }
+
+        private void output_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void input_TextChanged(object sender, EventArgs e)
         {
 
         }

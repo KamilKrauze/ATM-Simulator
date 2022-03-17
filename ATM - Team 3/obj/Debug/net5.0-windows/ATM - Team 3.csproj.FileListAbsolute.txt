@@ -16,3 +16,21 @@ D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\n
 D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ref\ATM - Team 3.dll
 D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.pdb
 D:\C# Workspace\ATM Simulator\KamilKrauze\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.genruntimeconfig.cache
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.exe
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.deps.json
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.runtimeconfig.json
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.runtimeconfig.dev.json
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.dll
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ref\ATM - Team 3.dll
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\bin\Debug\net5.0-windows\ATM - Team 3.pdb
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.csproj.AssemblyReference.cache
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM_Team3.ATM_form.resources
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.csproj.GenerateResource.cache
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.AssemblyInfoInputs.cache
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.AssemblyInfo.cs
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.csproj.CoreCompileInputs.cache
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.dll
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ref\ATM - Team 3.dll
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.pdb
+C:\Users\coomb\Source\Repos\ATM-Simulator\ATM - Team 3\obj\Debug\net5.0-windows\ATM - Team 3.genruntimeconfig.cache
