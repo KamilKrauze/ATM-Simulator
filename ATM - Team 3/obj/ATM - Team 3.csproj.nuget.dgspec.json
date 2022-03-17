@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {}
+    "C:\\Users\\dwlfe\\OneDrive - University of Dundee\\Year 2\\AC22005 - Computer Systems 2B - Architecture and Operating Systems\\Assessments\\Assignment2\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {}
   },
   "projects": {
-    "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {
+    "C:\\Users\\dwlfe\\OneDrive - University of Dundee\\Year 2\\AC22005 - Computer Systems 2B - Architecture and Operating Systems\\Assessments\\Assignment2\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
+        "projectUniqueName": "C:\\Users\\dwlfe\\OneDrive - University of Dundee\\Year 2\\AC22005 - Computer Systems 2B - Architecture and Operating Systems\\Assessments\\Assignment2\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
         "projectName": "ATM - Team 3",
-        "projectPath": "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\C# Workspace\\ATM - Team 3\\KamilKrauze\\ATM-Simulator\\ATM - Team 3\\obj\\",
+        "projectPath": "C:\\Users\\dwlfe\\OneDrive - University of Dundee\\Year 2\\AC22005 - Computer Systems 2B - Architecture and Operating Systems\\Assessments\\Assignment2\\ATM-Simulator\\ATM - Team 3\\ATM - Team 3.csproj",
+        "packagesPath": "C:\\Users\\dwlfe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dwlfe\\OneDrive - University of Dundee\\Year 2\\AC22005 - Computer Systems 2B - Architecture and Operating Systems\\Assessments\\Assignment2\\ATM-Simulator\\ATM - Team 3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dwlfe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
