@@ -17,6 +17,7 @@ namespace ATM_Team3
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new ATM_form());
             Application.Run(new ATM_form());
         }
     }
