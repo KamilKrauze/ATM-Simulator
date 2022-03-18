@@ -12,28 +12,50 @@ namespace ATM_Team3
 {
     public partial class Banking_form : Form
     {
+        // account just for testing
         Account accountTest;
-        Label lblBalance;
+        
+        // controls to add and remove as necessary
+        Label lblBalance, lblSuccess;
         Button[] btnWithdrawAmounts;
+        Timer tmrSuccess;
 
         public Banking_form()
         {
+
+            // account just for testing
             accountTest = new Account(300, 1111, 111111);
+
             InitializeComponent();
 
+            // initialise label for balance
             lblBalance = new Label();
-            lblBalance.Size = new Size(200, 50);
+            lblBalance.AutoSize = true;
             lblBalance.Location = new Point(168, 63);
             lblBalance.Font = new Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblBalance.ForeColor = SystemColors.ControlLight;
-            lblBalance.Location = new Point(168, 63);
-            lblBalance.Text = accountTest.getBalance().ToString();
+            lblBalance.Text = "Balance:\n£" + accountTest.getBalance().ToString();
 
-            btnWithdrawAmounts = new Button[3];
+            // initialise label for withdrawal success/failure
+            lblSuccess = new Label();
+            lblSuccess.AutoSize = true;
+            lblSuccess.Location = new Point(12, 388);
+            lblSuccess.Font = new Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSuccess.ForeColor = Color.IndianRed;
+            lblSuccess.Text = "";
+
+            // initialise timer for label disappearing
+            tmrSuccess = new Timer();
+            tmrSuccess.Interval = 1500;
+            tmrSuccess.Tick += new EventHandler(hideSuccessLabel);
+
+            // initialise buttons for withdrawal balance amounts
+            int[] amounts = { 10, 20, 50, 100, 500 };
+            btnWithdrawAmounts = new Button[amounts.Length];
 
             int buttonHeight = 63;
 
-            for (int i = 0; i < btnWithdrawAmounts.Length; i++)
+            for (int i = 0; i < amounts.Length; i++)
             {
                 btnWithdrawAmounts[i] = new Button();
                 
@@ -44,14 +66,30 @@ namespace ATM_Team3
                 btnWithdrawAmounts[i].Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);
                 btnWithdrawAmounts[i].Location = new Point(168, buttonHeight);
                 btnWithdrawAmounts[i].Size = new Size(150, 50);
-                btnWithdrawAmounts[i].Text = "amount" + i.ToString();
-                //btnWithdrawAmounts[i].Click += new EventHandler();
+                btnWithdrawAmounts[i].Text = "£" + amounts[i].ToString();
+
+                // temp variable to send value of button as parameter to event handler
+                int amountArg = amounts[i];
+                btnWithdrawAmounts[i].Click += delegate(object sender, EventArgs e)
+                {
+                    btnWithdrawAmount_Click(sender, e, amountArg);
+                };
+
                 buttonHeight += 56;
             }
         }
 
+        /**
+         * Method to view account balance
+         */
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
+
+            //update label
+            lblBalance.Text = "Balance:\n£" + accountTest.getBalance().ToString();
+
+            // swap controls in view as necessary
+            Controls.Remove(lblSuccess);
             for (int i = 0; i < btnWithdrawAmounts.Length; i++)
             {
                 Controls.Remove(btnWithdrawAmounts[i]);
@@ -59,6 +97,9 @@ namespace ATM_Team3
             Controls.Add(lblBalance);
         }
 
+        /**
+         * Method to show withdrawal options
+         */
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
             Controls.Remove(lblBalance);
@@ -66,6 +107,36 @@ namespace ATM_Team3
             {
                 Controls.Add(btnWithdrawAmounts[i]);
             }
+        }
+
+        /**
+         * Method to withdraw money
+         */
+        private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
+        {
+            if (accountTest.decrementBalance(amount))
+            {
+                lblSuccess.ForeColor = Color.LightGreen;
+                lblSuccess.Text = "Withdrawal successful";
+            }
+            else
+            {
+                lblSuccess.ForeColor = Color.IndianRed;
+                lblSuccess.Text = "Withdrawal failed";
+            }
+            Controls.Add(lblSuccess);
+            tmrSuccess.Stop();
+            tmrSuccess.Start();
+
+        }
+
+        /**
+         * Method to remove success label
+         */
+        private void hideSuccessLabel(Object sender, EventArgs e)
+        {
+            tmrSuccess.Stop();
+            Controls.Remove(lblSuccess);
         }
     }
 }
