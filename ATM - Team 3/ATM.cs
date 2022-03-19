@@ -21,7 +21,7 @@ namespace ATM_Team3
             accounts[1] = new Account(750, 2222, 222222);
             accounts[2] = new Account(3000, 3333, 333333);
 
-            InitializeComponent();
+            //InitializeComponent();
             this.Text = "ATM";
         }
 
