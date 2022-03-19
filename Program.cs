@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ATM_Team3
@@ -15,7 +16,7 @@ namespace ATM_Team3
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(true);
             Application.Run(new ATM_form());
         }
     }

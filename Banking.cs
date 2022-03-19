@@ -138,5 +138,11 @@ namespace ATM_Team3
             tmrSuccess.Stop();
             Controls.Remove(lblSuccess);
         }
+
+        // For threading since constructor cannot be called.
+        public static void run()
+        {
+            new Banking_form();
+        }
     }
 }
