@@ -75,7 +75,7 @@ namespace ATM_Team3
             this.input_lbl.Font = new System.Drawing.Font("Consolas", 16F);
             this.input_lbl.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.input_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.input_lbl.Location = new System.Drawing.Point(37, 176);
+            this.input_lbl.Location = new System.Drawing.Point(25, 176);
             this.input_lbl.Name = "input_lbl";
             this.input_lbl.Size = new System.Drawing.Size(125, 37);
             this.input_lbl.TabIndex = 2;
