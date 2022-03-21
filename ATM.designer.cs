@@ -98,7 +98,7 @@ namespace ATM_Team3
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(58, 279);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 333);
+            this.panel1.Size = new System.Drawing.Size(243, 340);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
