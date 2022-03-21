@@ -16,7 +16,8 @@ namespace ATM_Team3
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(true);
+            Application.SetCompatibleTextRenderingDefault(false);
+            
             Application.Run(new ATM_form());
         }
     }

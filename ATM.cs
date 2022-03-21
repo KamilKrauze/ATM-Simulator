@@ -102,9 +102,13 @@ namespace ATM_Team3
 
         }
 
-        private void input_TextChanged(object sender, EventArgs e)
+        private void buttonEnter_Click(object sender, EventArgs e)
         {
-
+            if(input_lbl.Text == "")
+            {
+                // Dialog message
+            }
+            // TODO: Do other checks and update the label if valid.
         }
     }
 }
