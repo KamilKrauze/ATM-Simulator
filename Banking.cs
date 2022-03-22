@@ -77,7 +77,7 @@ namespace ATM_Team3
                     btnWithdrawAmount_Click(sender, e, amountArg);
                 };
 
-                buttonHeight += 56;
+                buttonHeight += 55;
             }
         }
 
