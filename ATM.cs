@@ -140,6 +140,7 @@ namespace ATM_Team3
                     isAccountNoValid = false;
                     input_lbl.Text = "Account No: ";
                     input.Clear();
+                    Thread.Sleep(3000);
                 }
             }
             else
@@ -149,12 +150,13 @@ namespace ATM_Team3
             }
         }
 
-        // Helper functions
+        // Functions for thread constructors
         private void runBankForm() // Function to run on thread
         {
             bankObj.ShowDialog();
         }
 
+        // Helper functions
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
