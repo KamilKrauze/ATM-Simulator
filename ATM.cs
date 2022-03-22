@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ATM_Team3
@@ -16,6 +17,7 @@ namespace ATM_Team3
         private int account;
         private bool isAccountNoValid;
         private int attempts;
+        private Banking_form bankObj;
 
         public ATM_form(Account[] account)
         {
@@ -115,7 +117,7 @@ namespace ATM_Team3
             {
                 if (input.Text.Length != 6)
                 {
-                    System.Windows.Forms.MessageBox.Show("Please enter a 6 digit (ie. 123456) account number");
+                    MessageBox.Show("Please enter a 6 digit (ie. 123456) account number");
                     return;
                 }
                 isAccountNoValid = checkAccountNumber();
@@ -124,11 +126,11 @@ namespace ATM_Team3
             {
                 if (input.Text.Length != 4)
                 {
-                    System.Windows.Forms.MessageBox.Show("Please enter a 4 digit (ie. 1234) PIN");
+                    MessageBox.Show("Please enter a 4 digit (ie. 1234) PIN");
                     return;
                 }
 
-                if (attempts != 3)
+                if (attempts != 2)
                 {
                     if (!accounts_ref[account].checkPin(Int32.Parse(input.Text)))
                     {
@@ -136,14 +138,21 @@ namespace ATM_Team3
                     }
                     else
                     {
-                        Banking_form bankObj = new Banking_form(ref accounts_ref, account);
-                        bankObj.ShowDialog();
-                        this.Close();
+                        Thread account_t;
+                        bankObj = new Banking_form(ref accounts_ref, account);
+
+
+                        account_t = new Thread(runBankForm);
+                        account_t.Start();
+                        input.Clear();
+                        input_lbl.Text = "Account No: ";
+                        isAccountNoValid = false;
+                        //this.Close();
                     }
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("All attempts are invalid, temporarily locking system down...");
+                    MessageBox.Show("All attempts are invalid, temporarily locking system down...");
                     attempts = 0;
                     isAccountNoValid = false;
                     input_lbl.Text = "Account No: ";
@@ -152,12 +161,17 @@ namespace ATM_Team3
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Account number must only contain digits");
+                MessageBox.Show("Account number must only contain digits");
                 return;
             }
         }
 
         // Helper functions
+        private void runBankForm() // Function to run on thread
+        {
+            bankObj.ShowDialog();
+        }
+
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);

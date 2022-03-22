@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +19,7 @@ namespace ATM_Team3
         // controls to add and remove as necessary
         Label lblBalance, lblSuccess;
         Button[] btnWithdrawAmounts;
-        Timer tmrSuccess;
+        System.Windows.Forms.Timer tmrSuccess;
 
         public Banking_form(ref Account[] accounts, int account)
         {
@@ -46,7 +47,7 @@ namespace ATM_Team3
             lblSuccess.Text = "";
 
             // initialise timer for label disappearing
-            tmrSuccess = new Timer();
+            tmrSuccess = new System.Windows.Forms.Timer();
             tmrSuccess.Interval = 1500;
             tmrSuccess.Tick += new EventHandler(hideSuccessLabel);
 
@@ -54,7 +55,7 @@ namespace ATM_Team3
             int[] amounts = { 10, 20, 50, 100, 500 };
             btnWithdrawAmounts = new Button[amounts.Length];
 
-            int buttonHeight = 63;
+            int buttonHeight = 55;
 
             for (int i = 0; i < amounts.Length; i++)
             {
@@ -83,8 +84,10 @@ namespace ATM_Team3
         /**
          * Method to view account balance
          */
+        [Obsolete]
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Thread.CurrentThread.ThreadState.ToString());
 
             //update label
             lblBalance.Text = "Balance:\n£" + account_ref.getBalance().ToString();
