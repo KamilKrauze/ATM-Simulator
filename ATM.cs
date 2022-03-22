@@ -136,7 +136,7 @@ namespace ATM_Team3
                     }
                     else
                     {
-                        Banking_form bankObj = new Banking_form(ref accounts_ref[account]);
+                        Banking_form bankObj = new Banking_form(ref accounts_ref, account);
                         bankObj.ShowDialog();
                         this.Close();
                     }

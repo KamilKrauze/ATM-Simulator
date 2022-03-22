@@ -32,7 +32,9 @@ namespace ATM_Team3
             Console.WriteLine("Account 0: " + program.Account[0].getBalance());
             Application.Run(new ATM_form(program.Account));
             Console.WriteLine("Account 0: " + program.Account[0].getBalance());
-            
+
+            Application.Run(new ATM_form(program.Account));
+
             //Application.Run();
         }
     }

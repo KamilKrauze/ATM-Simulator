@@ -20,12 +20,12 @@ namespace ATM_Team3
         Button[] btnWithdrawAmounts;
         Timer tmrSuccess;
 
-        public Banking_form(ref Account account)
+        public Banking_form(ref Account[] accounts, int account)
         {
-            Console.WriteLine("Account: {0}",account.getBalance());
+            Console.WriteLine("Account: {0}",accounts[account].getBalance());
 
             // account just for testing
-            account_ref = account;
+            account_ref = accounts[account];
 
             InitializeComponent();
 
@@ -87,7 +87,7 @@ namespace ATM_Team3
         {
 
             //update label
-            lblBalance.Text = "Balance:\n£" + accountTest.getBalance().ToString();
+            lblBalance.Text = "Balance:\n£" + account_ref.getBalance().ToString();
 
             // swap controls in view as necessary
             Controls.Remove(lblSuccess);
@@ -115,7 +115,7 @@ namespace ATM_Team3
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
-            if (accountTest.decrementBalance(amount))
+            if (account_ref.decrementBalance(amount))
             {
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawal successful";
