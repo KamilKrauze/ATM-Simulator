@@ -77,7 +77,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                     btnWithdrawAmount_Click(sender, e, amountArg);
                 };
 
-                buttonHeight += 56;
+                buttonHeight += 55;
             }
         }
 
