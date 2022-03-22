@@ -36,21 +36,6 @@ namespace ATM_Team3
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button0_Click(object sender, EventArgs e)
         {
             input.AppendText("0");
@@ -141,13 +126,11 @@ namespace ATM_Team3
                         Thread account_t;
                         bankObj = new Banking_form(ref accounts_ref, account);
 
-
                         account_t = new Thread(runBankForm);
                         account_t.Start();
                         input.Clear();
                         input_lbl.Text = "Account No: ";
                         isAccountNoValid = false;
-                        //this.Close();
                     }
                 }
                 else

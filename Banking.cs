@@ -87,8 +87,7 @@ namespace ATM_Team3
         [Obsolete]
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Thread.CurrentThread.ThreadState.ToString());
-
+            
             //update label
             lblBalance.Text = "Balance:\n£" + account_ref.getBalance().ToString();
 
