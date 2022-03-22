@@ -13,7 +13,7 @@ namespace ATM_Team3
     public partial class Banking_form : Form
     {
         // account just for testing
-        Account accountTest;
+        Account account_ref;
         
         // controls to add and remove as necessary
         Label lblBalance, lblSuccess;
@@ -22,10 +22,10 @@ namespace ATM_Team3
 
         public Banking_form(ref Account account)
         {
-            Console.WriteLine("Account 0: {0} \nAccount 1: {1} \nAccount 2: {2}",account.getBalance(), account.getBalance(), account.getBalance());
+            Console.WriteLine("Account: {0}",account.getBalance());
 
             // account just for testing
-            accountTest = new Account(300, 1111, 111111);
+            account_ref = account;
 
             InitializeComponent();
 
@@ -35,7 +35,7 @@ namespace ATM_Team3
             lblBalance.Location = new Point(168, 63);
             lblBalance.Font = new Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblBalance.ForeColor = SystemColors.ControlLight;
-            lblBalance.Text = "Balance:\n£" + accountTest.getBalance().ToString();
+            lblBalance.Text = "Balance:\n£" + account_ref.getBalance().ToString();
 
             // initialise label for withdrawal success/failure
             lblSuccess = new Label();
