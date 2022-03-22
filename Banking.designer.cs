@@ -40,10 +40,11 @@ namespace ATM_Team3
             this.btnViewBalance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnViewBalance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnViewBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewBalance.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnViewBalance.Location = new System.Drawing.Point(12, 63);
+            this.btnViewBalance.Font = new System.Drawing.Font("Consolas", 9F);
+            this.btnViewBalance.Location = new System.Drawing.Point(15, 84);
+            this.btnViewBalance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnViewBalance.Name = "btnViewBalance";
-            this.btnViewBalance.Size = new System.Drawing.Size(150, 50);
+            this.btnViewBalance.Size = new System.Drawing.Size(193, 67);
             this.btnViewBalance.TabIndex = 0;
             this.btnViewBalance.Text = "View balance";
             this.btnViewBalance.UseVisualStyleBackColor = false;
@@ -52,11 +53,12 @@ namespace ATM_Team3
             // lblPrompt
             // 
             this.lblPrompt.AutoSize = true;
-            this.lblPrompt.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrompt.Font = new System.Drawing.Font("Consolas", 20.25F);
             this.lblPrompt.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblPrompt.Location = new System.Drawing.Point(12, 9);
+            this.lblPrompt.Location = new System.Drawing.Point(15, 12);
+            this.lblPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrompt.Name = "lblPrompt";
-            this.lblPrompt.Size = new System.Drawing.Size(374, 32);
+            this.lblPrompt.Size = new System.Drawing.Size(572, 48);
             this.lblPrompt.TabIndex = 1;
             this.lblPrompt.Text = "Please select an option:";
             // 
@@ -66,10 +68,11 @@ namespace ATM_Team3
             this.btnWithdraw.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnWithdraw.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWithdraw.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnWithdraw.Location = new System.Drawing.Point(12, 119);
+            this.btnWithdraw.Font = new System.Drawing.Font("Consolas", 9F);
+            this.btnWithdraw.Location = new System.Drawing.Point(15, 159);
+            this.btnWithdraw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnWithdraw.Name = "btnWithdraw";
-            this.btnWithdraw.Size = new System.Drawing.Size(150, 50);
+            this.btnWithdraw.Size = new System.Drawing.Size(193, 67);
             this.btnWithdraw.TabIndex = 2;
             this.btnWithdraw.Text = "Withdraw cash";
             this.btnWithdraw.UseVisualStyleBackColor = false;
@@ -77,13 +80,14 @@ namespace ATM_Team3
             // 
             // Banking_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(399, 450);
+            this.ClientSize = new System.Drawing.Size(589, 600);
             this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.lblPrompt);
             this.Controls.Add(this.btnViewBalance);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Banking_form";
             this.Text = "Banking";
             this.ResumeLayout(false);
