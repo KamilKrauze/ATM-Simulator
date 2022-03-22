@@ -121,6 +121,7 @@ namespace ATM_Team3
             {
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawal successful";
+                
             }
             else
             {
@@ -130,7 +131,6 @@ namespace ATM_Team3
             Controls.Add(lblSuccess);
             tmrSuccess.Stop();
             tmrSuccess.Start();
-
         }
 
         /**
@@ -140,9 +140,7 @@ namespace ATM_Team3
         {
             tmrSuccess.Stop();
             Controls.Remove(lblSuccess);
+            this.Close();
         }
-
-        // For threading since constructor cannot be called.
-
     }
 }
