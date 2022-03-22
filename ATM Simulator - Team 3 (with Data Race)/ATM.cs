@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ATM_Team3
+namespace ATM_Simulator___Team_3__with_Data_Race_
 {
     public partial class ATM_form : Form
     {

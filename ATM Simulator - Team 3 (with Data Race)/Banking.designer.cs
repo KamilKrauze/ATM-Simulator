@@ -1,5 +1,5 @@
 ﻿
-namespace ATM_Team3
+namespace ATM_Simulator___Team_3__with_Data_Race_
 {
     partial class Banking_form
     {
