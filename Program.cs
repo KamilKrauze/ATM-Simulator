@@ -27,11 +27,13 @@ namespace ATM_Team3
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            new Program();
+            Console.WriteLine("Account 0: " + program.Account[0].getBalance());
+            Application.Run(new ATM_form(program.Account));
+            Console.WriteLine("Account 0: " + program.Account[0].getBalance());
             
-            Application.Run(new Banking_form(program.Account));
-            Console.WriteLine("New Balance 0: " + program.Account[0].getBalance());
-            
-            Application.Run();
+            //Application.Run();
         }
     }
 }

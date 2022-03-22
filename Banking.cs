@@ -23,7 +23,6 @@ namespace ATM_Team3
         public Banking_form(Account[] account)
         {
             Console.WriteLine("Account 0: {0} \nAccount 1: {1} \nAccount 2: {2}",account[0].getBalance(), account[1].getBalance(), account[2].getBalance());
-            account[0].setBalance(100);
 
             // account just for testing
             accountTest = new Account(300, 1111, 111111);
