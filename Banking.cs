@@ -20,9 +20,9 @@ namespace ATM_Team3
         Button[] btnWithdrawAmounts;
         Timer tmrSuccess;
 
-        public Banking_form(Account[] account)
+        public Banking_form(ref Account account)
         {
-            Console.WriteLine("Account 0: {0} \nAccount 1: {1} \nAccount 2: {2}",account[0].getBalance(), account[1].getBalance(), account[2].getBalance());
+            Console.WriteLine("Account 0: {0} \nAccount 1: {1} \nAccount 2: {2}",account.getBalance(), account.getBalance(), account.getBalance());
 
             // account just for testing
             accountTest = new Account(300, 1111, 111111);
