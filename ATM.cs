@@ -136,7 +136,7 @@ namespace ATM_Team3
                     }
                     else
                     {
-                        Banking_form bankObj = new Banking_form(accounts_ref);
+                        Banking_form bankObj = new Banking_form(ref accounts_ref[account]);
                         bankObj.ShowDialog();
                         this.Close();
                     }
@@ -147,6 +147,7 @@ namespace ATM_Team3
                     attempts = 0;
                     isAccountNoValid = false;
                     input_lbl.Text = "Account No: ";
+                    input.Clear();
                 }
             }
             else
@@ -166,6 +167,7 @@ namespace ATM_Team3
                 {
                     input_lbl.Text = "PIN:";
                     account = i;
+                    input.Clear();
                     return true;
                 }
             }
