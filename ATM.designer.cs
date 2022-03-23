@@ -82,7 +82,6 @@ namespace ATM_Team3
             this.input_lbl.Size = new System.Drawing.Size(84, 26);
             this.input_lbl.TabIndex = 2;
             this.input_lbl.Text = "prompt";
-            this.input_lbl.Click += new System.EventHandler(this.output_Click);
             // 
             // panel1
             // 
@@ -310,8 +309,6 @@ namespace ATM_Team3
             this.MaximizeBox = false;
             this.Name = "ATM_form";
             this.Text = "ATM";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ATM_form_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
