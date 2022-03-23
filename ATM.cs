@@ -39,6 +39,11 @@ namespace ATM_Team3
             InitializeComponent();
             this.Text = "ATM";
             input_lbl.Text = "Account No: ";
+
+            //this.FormClosing += (o, e) =>
+            //{
+            //    eventListBox_ref.Items.Add(Thread.CurrentThread.Name + ": Waiting for user input...");
+            //};
         }
 
         /**
@@ -212,7 +217,7 @@ namespace ATM_Team3
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
-            for (int i=0; i<accounts_ref.GetLength(0); i++)
+            for (int i=0; i<accounts_ref.Length; i++)
             {
                 if(accounts_ref[i].getAccountNum() == accountNum)
                 {
@@ -223,7 +228,7 @@ namespace ATM_Team3
                 }
             }
             return false;
-        }
+        }        
         
         /**
          * Method to check if input is numbers only
@@ -237,6 +242,11 @@ namespace ATM_Team3
             }
 
             return true;
+        }
+
+        private void ATM_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Console.WriteLine("Closing: " + Thread.CurrentThread.Name);
         }
     }
 }
