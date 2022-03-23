@@ -42,7 +42,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
          */
         public Boolean decrementBalance(int amount)
         {
-            if (this.balance > amount)
+            if (this.balance >= amount)
             {
                 balance -= amount;
                 return true;

@@ -62,7 +62,7 @@ namespace ATM_Team3
                 btnWithdrawAmounts[i] = new Button();
                 
                 btnWithdrawAmounts[i].BackColor = Color.White;
-                btnWithdrawAmounts[i].FlatAppearance.MouseDownBackColor = Color.Gray;
+                btnWithdrawAmounts[i].FlatAppearance.MouseDownBackColor = Color.FromArgb(255,0,192,192);
                 btnWithdrawAmounts[i].FlatAppearance.MouseOverBackColor = Color.Silver;
                 btnWithdrawAmounts[i].FlatStyle = FlatStyle.Flat;
                 btnWithdrawAmounts[i].Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);

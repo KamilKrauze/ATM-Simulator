@@ -59,7 +59,6 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.Title.Size = new System.Drawing.Size(343, 187);
             this.Title.TabIndex = 0;
             this.Title.Text = "ATM";
-            this.Title.Click += new System.EventHandler(this.label1_Click);
             // 
             // input
             // 
@@ -100,7 +99,6 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 340);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // buttonClr
             // 
