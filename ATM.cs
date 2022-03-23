@@ -21,7 +21,7 @@ namespace ATM_Team3
 
         public ATM_form(Account[] account)
         {
-            this.accounts_ref = account;
+            
             this.account = -1;
             this.isAccountNoValid = false;
             this.attempts = 0;

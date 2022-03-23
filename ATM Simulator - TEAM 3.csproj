@@ -53,6 +53,12 @@
     <Compile Include="ATM.designer.cs">
       <DependentUpon>ATM.cs</DependentUpon>
     </Compile>
+    <Compile Include="BankComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankComputer.Designer.cs">
+      <DependentUpon>BankComputer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Banking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ATM.resx">
       <DependentUpon>ATM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankComputer.resx">
+      <DependentUpon>BankComputer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banking.resx">
       <DependentUpon>Banking.cs</DependentUpon>
