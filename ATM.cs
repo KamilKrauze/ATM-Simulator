@@ -160,7 +160,7 @@ namespace ATM_Team3
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
-            for (int i=0; i<accounts_ref.GetLength(0); i++)
+            for (int i=0; i<accounts_ref.GetLength(0); i++) // TODO: FIX THIS ERROR
             {
                 if(accounts_ref[i].getAccountNum() == accountNum)
                 {
