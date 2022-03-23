@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/**
+ * AC22005 Assignment 2 Group 3
+ * Ross Coombs: 2410466
+ * Daniel Ferrier: 2413440
+ * Kamil Krauze: 2414951
+ */
+
 namespace ATM_Team3
 {
     public class Account
