@@ -21,12 +21,12 @@ namespace ATM_Team3
         Button[] btnWithdrawAmounts;
         System.Windows.Forms.Timer tmrSuccess;
 
-        public Banking_form(ref Account[] accounts, int account)
+        public Banking_form(Account account)
         {
-            Console.WriteLine("Account: {0}",accounts[account].getBalance());
+            Console.WriteLine("Account: {0}",account.getBalance());
 
             // account just for testing
-            account_ref = accounts[account];
+            account_ref = account;
 
             InitializeComponent();
 
@@ -87,8 +87,7 @@ namespace ATM_Team3
         [Obsolete]
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Thread.CurrentThread.ThreadState.ToString());
-
+            
             //update label
             lblBalance.Text = "Balance:\n£" + account_ref.getBalance().ToString();
 
@@ -128,10 +127,10 @@ namespace ATM_Team3
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Withdrawal failed";
             }
+
             Controls.Add(lblSuccess);
             tmrSuccess.Stop();
             tmrSuccess.Start();
-
         }
 
         /**
@@ -141,9 +140,7 @@ namespace ATM_Team3
         {
             tmrSuccess.Stop();
             Controls.Remove(lblSuccess);
+            //this.Close();
         }
-
-        // For threading since constructor cannot be called.
-
     }
 }

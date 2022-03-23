@@ -36,21 +36,6 @@ namespace ATM_Team3
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button0_Click(object sender, EventArgs e)
         {
             input.AppendText("0");
@@ -139,15 +124,13 @@ namespace ATM_Team3
                     else
                     {
                         Thread account_t;
-                        bankObj = new Banking_form(ref accounts_ref, account);
-
+                        bankObj = new Banking_form(accounts_ref[account]);
 
                         account_t = new Thread(runBankForm);
                         account_t.Start();
                         input.Clear();
                         input_lbl.Text = "Account No: ";
                         isAccountNoValid = false;
-                        //this.Close();
                     }
                 }
                 else
@@ -157,6 +140,7 @@ namespace ATM_Team3
                     isAccountNoValid = false;
                     input_lbl.Text = "Account No: ";
                     input.Clear();
+                    Thread.Sleep(3000);
                 }
             }
             else
@@ -166,12 +150,13 @@ namespace ATM_Team3
             }
         }
 
-        // Helper functions
+        // Functions for thread constructors
         private void runBankForm() // Function to run on thread
         {
             bankObj.ShowDialog();
         }
 
+        // Helper functions
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
