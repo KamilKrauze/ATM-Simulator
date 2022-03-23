@@ -243,10 +243,5 @@ namespace ATM_Team3
 
             return true;
         }
-
-        private void ATM_form_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Console.WriteLine("Closing: " + Thread.CurrentThread.Name);
-        }
     }
 }
