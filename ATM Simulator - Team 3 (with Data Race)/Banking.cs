@@ -9,11 +9,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * AC22005 Assignment 2 Group 3
+ * Ross Coombs: 2410466
+ * Daniel Ferrier: 2413440
+ * Kamil Krauze: 2414951
+ */
+
 namespace ATM_Simulator___Team_3__with_Data_Race_
 {
     public partial class Banking_form : Form
     {
-        // account just for testing
+        // reference to account with which form is open
         Account account_ref;
 
         // instance variable for new amount
@@ -24,11 +31,14 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         Button[] btnWithdrawAmounts;
         System.Windows.Forms.Timer tmrSuccess;
 
+        /**
+         * Constructor method, taking account as parameter
+         */
         public Banking_form(Account account)
         {
             Console.WriteLine("Account: {0}",account.getBalance());
 
-            // account just for testing
+            // assign account reference to instance variable
             account_ref = account;
 
             InitializeComponent();
@@ -119,7 +129,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
+            // get balance and assign to instance variable
             newAmount = account_ref.getBalance();
+            
+            // check that account has high enough balance and change success label appropriately
             if (account_ref.getBalance() >= amount)
             {
                 lblSuccess.ForeColor = Color.LightGreen;
@@ -133,6 +146,8 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             }
 
             Controls.Add(lblSuccess);
+
+            // reset success label
             tmrSuccess.Stop();
             tmrSuccess.Start();
         }
@@ -143,7 +158,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         private void hideSuccessLabel(Object sender, EventArgs e)
         {
             tmrSuccess.Stop();
+
+            // set account to have new balance
             account_ref.setBalance(newAmount);
+
             Controls.Remove(lblSuccess);
             this.Close();
         }

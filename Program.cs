@@ -5,6 +5,13 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
+/**
+ * AC22005 Assignment 2 Group 3
+ * Ross Coombs: 2410466
+ * Daniel Ferrier: 2413440
+ * Kamil Krauze: 2414951
+ */
+
 namespace ATM_Team3
 {
     class Program

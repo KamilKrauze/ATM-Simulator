@@ -9,11 +9,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * AC22005 Assignment 2 Group 3
+ * Ross Coombs: 2410466
+ * Daniel Ferrier: 2413440
+ * Kamil Krauze: 2414951
+ */
+
 namespace ATM_Team3
 {
     public partial class Banking_form : Form
     {
-        // account just for testing
+        // reference to account with which form is open
         Account account_ref;
         
         // controls to add and remove as necessary
@@ -21,11 +28,14 @@ namespace ATM_Team3
         Button[] btnWithdrawAmounts;
         System.Windows.Forms.Timer tmrSuccess;
 
+        /**
+         * Constructor method, taking account as parameter
+         */
         public Banking_form(Account account)
         {
             Console.WriteLine("Account: {0}",account.getBalance());
 
-            // account just for testing
+            // assign account reference to instance variable
             account_ref = account;
 
             InitializeComponent();
@@ -48,7 +58,7 @@ namespace ATM_Team3
 
             // initialise timer for label disappearing
             tmrSuccess = new System.Windows.Forms.Timer();
-            tmrSuccess.Interval = 1500;
+            tmrSuccess.Interval = 3000;
             tmrSuccess.Tick += new EventHandler(hideSuccessLabel);
 
             // initialise buttons for withdrawal balance amounts
@@ -116,6 +126,7 @@ namespace ATM_Team3
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
+            // decrement balance and change success label depending on success
             if (account_ref.decrementBalance(amount))
             {
                 lblSuccess.ForeColor = Color.LightGreen;
@@ -128,6 +139,8 @@ namespace ATM_Team3
             }
 
             Controls.Add(lblSuccess);
+
+            // reset success label
             tmrSuccess.Stop();
             tmrSuccess.Start();
         }
