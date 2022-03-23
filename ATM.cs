@@ -124,7 +124,7 @@ namespace ATM_Team3
                     else
                     {
                         Thread account_t;
-                        bankObj = new Banking_form(ref accounts_ref, account);
+                        bankObj = new Banking_form(accounts_ref[account]);
 
                         account_t = new Thread(runBankForm);
                         account_t.Start();

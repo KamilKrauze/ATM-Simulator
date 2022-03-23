@@ -21,12 +21,12 @@ namespace ATM_Team3
         Button[] btnWithdrawAmounts;
         System.Windows.Forms.Timer tmrSuccess;
 
-        public Banking_form(ref Account[] accounts, int account)
+        public Banking_form(Account account)
         {
-            Console.WriteLine("Account: {0}",accounts[account].getBalance());
+            Console.WriteLine("Account: {0}",account.getBalance());
 
             // account just for testing
-            account_ref = accounts[account];
+            account_ref = account;
 
             InitializeComponent();
 
@@ -121,13 +121,13 @@ namespace ATM_Team3
             {
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawal successful";
-                
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Withdrawal failed";
             }
+
             Controls.Add(lblSuccess);
             tmrSuccess.Stop();
             tmrSuccess.Start();
@@ -140,7 +140,7 @@ namespace ATM_Team3
         {
             tmrSuccess.Stop();
             Controls.Remove(lblSuccess);
-            this.Close();
+            //this.Close();
         }
     }
 }
