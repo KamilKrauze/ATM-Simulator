@@ -15,6 +15,9 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
     {
         // account just for testing
         Account account_ref;
+
+        // instance variable for new amount
+        int newAmount;
         
         // controls to add and remove as necessary
         Label lblBalance, lblSuccess;
@@ -48,7 +51,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 
             // initialise timer for label disappearing
             tmrSuccess = new System.Windows.Forms.Timer();
-            tmrSuccess.Interval = 1500;
+            tmrSuccess.Interval = 3000;
             tmrSuccess.Tick += new EventHandler(hideSuccessLabel);
 
             // initialise buttons for withdrawal balance amounts
@@ -84,7 +87,6 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         /**
          * Method to view account balance
          */
-        [Obsolete]
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
             
@@ -117,10 +119,12 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
-            if (account_ref.decrementBalance(amount))
+            newAmount = account_ref.getBalance();
+            if (account_ref.getBalance() >= amount)
             {
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawal successful";
+                newAmount -= amount;
             }
             else
             {
@@ -139,6 +143,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         private void hideSuccessLabel(Object sender, EventArgs e)
         {
             tmrSuccess.Stop();
+            account_ref.setBalance(newAmount);
             Controls.Remove(lblSuccess);
             this.Close();
         }
