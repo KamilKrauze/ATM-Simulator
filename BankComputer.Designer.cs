@@ -41,6 +41,7 @@ namespace ATM_Team3
             this.Accessing = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountView_lbl = new System.Windows.Forms.Label();
             this.eventLog_lstBox = new System.Windows.Forms.ListBox();
+            this.eventLog_lbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@ namespace ATM_Team3
             this.title_lbl.AutoSize = true;
             this.title_lbl.Font = new System.Drawing.Font("Gill Sans MT", 22F, System.Drawing.FontStyle.Bold);
             this.title_lbl.ForeColor = System.Drawing.Color.White;
-            this.title_lbl.Location = new System.Drawing.Point(315, 6);
+            this.title_lbl.Location = new System.Drawing.Point(323, 6);
             this.title_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title_lbl.Name = "title_lbl";
             this.title_lbl.Size = new System.Drawing.Size(319, 42);
@@ -68,7 +69,7 @@ namespace ATM_Team3
             this.StartATM_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.StartATM_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.StartATM_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartATM_button.Location = new System.Drawing.Point(766, 396);
+            this.StartATM_button.Location = new System.Drawing.Point(766, 395);
             this.StartATM_button.Margin = new System.Windows.Forms.Padding(2);
             this.StartATM_button.Name = "StartATM_button";
             this.StartATM_button.Size = new System.Drawing.Size(138, 44);
@@ -132,6 +133,7 @@ namespace ATM_Team3
             // 
             // accountDataGrid
             // 
+            this.accountDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.accountDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.accountDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AccountNo,
@@ -180,11 +182,23 @@ namespace ATM_Team3
             // 
             // eventLog_lstBox
             // 
+            this.eventLog_lstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventLog_lstBox.FormattingEnabled = true;
             this.eventLog_lstBox.Location = new System.Drawing.Point(380, 71);
             this.eventLog_lstBox.Name = "eventLog_lstBox";
             this.eventLog_lstBox.Size = new System.Drawing.Size(343, 368);
             this.eventLog_lstBox.TabIndex = 6;
+            // 
+            // eventLog_lbl
+            // 
+            this.eventLog_lbl.AutoSize = true;
+            this.eventLog_lbl.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventLog_lbl.ForeColor = System.Drawing.Color.White;
+            this.eventLog_lbl.Location = new System.Drawing.Point(377, 52);
+            this.eventLog_lbl.Name = "eventLog_lbl";
+            this.eventLog_lbl.Size = new System.Drawing.Size(70, 18);
+            this.eventLog_lbl.TabIndex = 7;
+            this.eventLog_lbl.Text = "Event Log";
             // 
             // BankComputer_form
             // 
@@ -193,6 +207,7 @@ namespace ATM_Team3
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(919, 451);
+            this.Controls.Add(this.eventLog_lbl);
             this.Controls.Add(this.eventLog_lstBox);
             this.Controls.Add(this.accountView_lbl);
             this.Controls.Add(this.accountDataGrid);
@@ -227,5 +242,6 @@ namespace ATM_Team3
         private System.Windows.Forms.DataGridViewTextBoxColumn Accessing;
         private System.Windows.Forms.Label accountView_lbl;
         private System.Windows.Forms.ListBox eventLog_lstBox;
+        private System.Windows.Forms.Label eventLog_lbl;
     }
 }

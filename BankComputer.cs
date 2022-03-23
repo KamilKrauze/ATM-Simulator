@@ -38,11 +38,12 @@ namespace ATM_Team3
         {
             for(int i=0; i<account.Length; i++)
             {
-                accountDataGrid.Rows.Add(
-                                        account[i].getAccountNum().ToString(),
-                                        account[i].getBalance().ToString(),
-                                        "0"
-                                        );
+                accountDataGrid.Rows.Add
+                    (
+                        account[i].getAccountNum().ToString(),
+                        account[i].getBalance().ToString(),
+                        "0"
+                    );
             }
         }
 
