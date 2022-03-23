@@ -13,7 +13,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 {
     public partial class ATM_form : Form
     {
-        private Account[] accounts_ref;
+        private Account[] accounts_ref_arr;
         private int account;
         private bool isAccountNoValid;
         private int attempts;
@@ -21,7 +21,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 
         public ATM_form(Account[] account)
         {
-            this.accounts_ref = account;
+            this.accounts_ref_arr = account;
             this.account = -1;
             this.isAccountNoValid = false;
             this.attempts = 0;
@@ -117,14 +117,14 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 
                 if (attempts != 2)
                 {
-                    if (!accounts_ref[account].checkPin(Int32.Parse(input.Text)))
+                    if (!accounts_ref_arr[account].checkPin(Int32.Parse(input.Text)))
                     {
                         attempts++;
                     }
                     else
                     {
                         Thread account_t;
-                        bankObj = new Banking_form(accounts_ref[account]);
+                        bankObj = new Banking_form(accounts_ref_arr[account]);
 
                         account_t = new Thread(runBankForm);
                         account_t.Start();
@@ -160,9 +160,9 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
-            for (int i=0; i<accounts_ref.GetLength(0); i++)
+            for (int i=0; i< accounts_ref_arr.GetLength(0); i++)
             {
-                if(accounts_ref[i].getAccountNum() == accountNum)
+                if(accounts_ref_arr[i].getAccountNum() == accountNum)
                 {
                     input_lbl.Text = "PIN:";
                     account = i;
