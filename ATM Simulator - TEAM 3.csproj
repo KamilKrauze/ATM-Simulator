@@ -89,7 +89,6 @@
     <None Include="ClassDiagram.cd" />
     <None Include="Properties\DataSources\ATM_Team3.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\ATM_Team3.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\BankComputer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
