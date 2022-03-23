@@ -17,12 +17,8 @@ namespace ATM_Team3
         
         private Account[] account = new Account[3];
 
-        private Thread thread_ref;
-
         public BankComputer_form()
         {
-            thread_ref = null;
-
             // Initialize accounts
             account[0] = new Account(300, 1111, 111111);
             account[1] = new Account(750, 2222, 222222);
