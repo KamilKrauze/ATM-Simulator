@@ -84,7 +84,6 @@ namespace ATM_Team3
         /**
          * Method to view account balance
          */
-        [Obsolete]
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
             

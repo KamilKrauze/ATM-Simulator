@@ -29,6 +29,11 @@ namespace ATM_Team3
             InitializeComponent();
             this.Text = "ATM";
             input_lbl.Text = "Account No: ";
+
+            //this.FormClosing += (o, e) =>
+            //{
+            //    eventListBox_ref.Items.Add(Thread.CurrentThread.Name + ": Waiting for user input...");
+            //};
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -160,7 +165,7 @@ namespace ATM_Team3
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
-            for (int i=0; i<accounts_ref.Length; i++) // TODO: FIX THIS ERROR
+            for (int i=0; i<accounts_ref.Length; i++)
             {
                 if(accounts_ref[i].getAccountNum() == accountNum)
                 {
@@ -172,6 +177,7 @@ namespace ATM_Team3
             }
             return false;
         }
+
         private bool IsDigitsOnly(string text) // Check if string contains only digits - https://stackoverflow.com/questions/7461080/fastest-way-to-check-if-string-contains-only-digits-in-c-sharp - 22/03/2022
         {
             foreach (char chr in text)
@@ -181,6 +187,11 @@ namespace ATM_Team3
             }
 
             return true;
+        }
+
+        private void ATM_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Console.WriteLine("Closing: " + Thread.CurrentThread.Name);
         }
     }
 }

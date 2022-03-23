@@ -16,11 +16,12 @@ namespace ATM_Team3
         private ATM_form atm;
         
         private Account[] account = new Account[3];
-        private int threadCount;
+
+        private Thread atm_thread;
 
         public BankComputer_form()
         {
-            threadCount = 0;
+            atm_thread = new Thread(showForm); // Initializes thread.
 
             // Initialize accounts
             account[0] = new Account(300, 1111, 111111);
@@ -30,38 +31,56 @@ namespace ATM_Team3
             InitializeComponent();
             title_lbl.Location = new Point(Width/3, 10);
 
-            initDataGrid();
+            InitializeDataGrid();
         }
 
-        // Initialized data grid with values from account
-        private void initDataGrid()
+        // Initializes the data grid with values from account
+        private void InitializeDataGrid()
         {
             for(int i=0; i<account.Length; i++)
             {
                 accountDataGrid.Rows.Add
                     (
                         account[i].getAccountNum().ToString(),
-                        account[i].getBalance().ToString(),
-                        "0"
+                        account[i].getBalance().ToString()
                     );
+            }
+        }
+
+        private void updateDataGrid()
+        {
+            for (int i = 0; i < account.Length; i++)
+            {
+                accountDataGrid.Rows[i].Cells["AccountNo"].Value = account[i].getAccountNum().ToString();
+                accountDataGrid.Rows[i].Cells["Balance"].Value = account[i].getBalance().ToString();
             }
         }
 
         private void startATM_buttonClick(object sender, EventArgs e)
         {
-            Thread atm_thread = new Thread(showForm);
             atm = new ATM_form(account);
-            atm_thread.Name = "ATM " + threadCount;
             atm_thread.Start();
-            eventLog_lstBox.Items.Add(atm_thread.Name + " is Running");
             Thread.Sleep(1500);
+        }
+
+        private void BankComputer_Activate(object sender, System.EventArgs e)
+        {
+            Console.WriteLine("Thread Status: {0}", atm_thread.ThreadState);
+            if (atm_thread.ThreadState == ThreadState.Stopped)
+            {
+                updateDataGrid();
+            }
         }
 
         //Helper function to show form for when the thread starts
         private void showForm()
         {
-            threadCount++;
             atm.ShowDialog();
+        }
+
+        private void refresh_button_Click(object sender, EventArgs e)
+        {
+            updateDataGrid();
         }
     }
 }

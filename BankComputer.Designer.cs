@@ -31,18 +31,11 @@ namespace ATM_Team3
         {
             this.title_lbl = new System.Windows.Forms.Label();
             this.StartATM_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.accountDataGrid = new System.Windows.Forms.DataGridView();
+            this.accountView_lbl = new System.Windows.Forms.Label();
+            this.refresh_button = new System.Windows.Forms.Button();
             this.AccountNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accessing = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accountView_lbl = new System.Windows.Forms.Label();
-            this.eventLog_lstBox = new System.Windows.Forms.ListBox();
-            this.eventLog_lbl = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,73 +56,20 @@ namespace ATM_Team3
             // StartATM_button
             // 
             this.StartATM_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.StartATM_button.BackColor = System.Drawing.SystemColors.Control;
+            this.StartATM_button.BackColor = System.Drawing.Color.White;
             this.StartATM_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StartATM_button.FlatAppearance.BorderSize = 2;
             this.StartATM_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.StartATM_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.StartATM_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartATM_button.Location = new System.Drawing.Point(766, 395);
+            this.StartATM_button.Location = new System.Drawing.Point(737, 71);
             this.StartATM_button.Margin = new System.Windows.Forms.Padding(2);
             this.StartATM_button.Name = "StartATM_button";
-            this.StartATM_button.Size = new System.Drawing.Size(138, 44);
+            this.StartATM_button.Size = new System.Drawing.Size(171, 44);
             this.StartATM_button.TabIndex = 1;
             this.StartATM_button.Text = "Start ATM";
             this.StartATM_button.UseVisualStyleBackColor = false;
             this.StartATM_button.Click += new System.EventHandler(this.startATM_buttonClick);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(4, 19);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 58);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Create New";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Gill Sans MT", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(762, 71);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(146, 208);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Account Options";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(4, 144);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 58);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(4, 82);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 58);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // accountDataGrid
             // 
@@ -137,13 +77,39 @@ namespace ATM_Team3
             this.accountDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.accountDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AccountNo,
-            this.Balance,
-            this.Accessing});
+            this.Balance});
             this.accountDataGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.accountDataGrid.Location = new System.Drawing.Point(13, 71);
             this.accountDataGrid.Name = "accountDataGrid";
-            this.accountDataGrid.Size = new System.Drawing.Size(343, 368);
+            this.accountDataGrid.Size = new System.Drawing.Size(719, 368);
             this.accountDataGrid.TabIndex = 4;
+            // 
+            // accountView_lbl
+            // 
+            this.accountView_lbl.AutoSize = true;
+            this.accountView_lbl.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountView_lbl.ForeColor = System.Drawing.Color.White;
+            this.accountView_lbl.Location = new System.Drawing.Point(13, 52);
+            this.accountView_lbl.Name = "accountView_lbl";
+            this.accountView_lbl.Size = new System.Drawing.Size(101, 18);
+            this.accountView_lbl.TabIndex = 5;
+            this.accountView_lbl.Text = "Accounts View";
+            // 
+            // refresh_button
+            // 
+            this.refresh_button.BackColor = System.Drawing.Color.White;
+            this.refresh_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.refresh_button.FlatAppearance.BorderSize = 2;
+            this.refresh_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.refresh_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.refresh_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refresh_button.Location = new System.Drawing.Point(832, 364);
+            this.refresh_button.Name = "refresh_button";
+            this.refresh_button.Size = new System.Drawing.Size(75, 75);
+            this.refresh_button.TabIndex = 6;
+            this.refresh_button.Text = "Refresh";
+            this.refresh_button.UseVisualStyleBackColor = false;
+            this.refresh_button.Click += new System.EventHandler(this.refresh_button_Click);
             // 
             // AccountNo
             // 
@@ -161,45 +127,6 @@ namespace ATM_Team3
             this.Balance.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Balance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Accessing
-            // 
-            this.Accessing.HeaderText = "Accessing";
-            this.Accessing.Name = "Accessing";
-            this.Accessing.ReadOnly = true;
-            this.Accessing.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Accessing.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // accountView_lbl
-            // 
-            this.accountView_lbl.AutoSize = true;
-            this.accountView_lbl.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountView_lbl.ForeColor = System.Drawing.Color.White;
-            this.accountView_lbl.Location = new System.Drawing.Point(13, 52);
-            this.accountView_lbl.Name = "accountView_lbl";
-            this.accountView_lbl.Size = new System.Drawing.Size(95, 18);
-            this.accountView_lbl.TabIndex = 5;
-            this.accountView_lbl.Text = "Account View";
-            // 
-            // eventLog_lstBox
-            // 
-            this.eventLog_lstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventLog_lstBox.FormattingEnabled = true;
-            this.eventLog_lstBox.Location = new System.Drawing.Point(380, 71);
-            this.eventLog_lstBox.Name = "eventLog_lstBox";
-            this.eventLog_lstBox.Size = new System.Drawing.Size(343, 368);
-            this.eventLog_lstBox.TabIndex = 6;
-            // 
-            // eventLog_lbl
-            // 
-            this.eventLog_lbl.AutoSize = true;
-            this.eventLog_lbl.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventLog_lbl.ForeColor = System.Drawing.Color.White;
-            this.eventLog_lbl.Location = new System.Drawing.Point(377, 52);
-            this.eventLog_lbl.Name = "eventLog_lbl";
-            this.eventLog_lbl.Size = new System.Drawing.Size(70, 18);
-            this.eventLog_lbl.TabIndex = 7;
-            this.eventLog_lbl.Text = "Event Log";
-            // 
             // BankComputer_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,11 +134,9 @@ namespace ATM_Team3
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(919, 451);
-            this.Controls.Add(this.eventLog_lbl);
-            this.Controls.Add(this.eventLog_lstBox);
+            this.Controls.Add(this.refresh_button);
             this.Controls.Add(this.accountView_lbl);
             this.Controls.Add(this.accountDataGrid);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.StartATM_button);
             this.Controls.Add(this.title_lbl);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -221,7 +146,7 @@ namespace ATM_Team3
             this.Name = "BankComputer_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank Main Computer";
-            this.groupBox1.ResumeLayout(false);
+            this.Activated += new System.EventHandler(this.BankComputer_Activate);
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,16 +157,10 @@ namespace ATM_Team3
 
         private System.Windows.Forms.Label title_lbl;
         private System.Windows.Forms.Button StartATM_button;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView accountDataGrid;
+        private System.Windows.Forms.Label accountView_lbl;
+        private System.Windows.Forms.Button refresh_button;
         private System.Windows.Forms.DataGridViewTextBoxColumn AccountNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Balance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Accessing;
-        private System.Windows.Forms.Label accountView_lbl;
-        private System.Windows.Forms.ListBox eventLog_lstBox;
-        private System.Windows.Forms.Label eventLog_lbl;
     }
 }
