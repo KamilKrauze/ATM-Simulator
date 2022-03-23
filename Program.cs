@@ -14,7 +14,7 @@ namespace ATM_Team3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BankComputer());
+            Application.Run(new BankComputer_form());
         }
     }
 }

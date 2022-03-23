@@ -21,7 +21,7 @@ namespace ATM_Team3
 
         public ATM_form(Account[] account)
         {
-            
+            this.accounts_ref = account;
             this.account = -1;
             this.isAccountNoValid = false;
             this.attempts = 0;
@@ -160,7 +160,7 @@ namespace ATM_Team3
         private bool checkAccountNumber()
         {
             int accountNum = Int32.Parse(input.Text);
-            for (int i=0; i<accounts_ref.GetLength(0); i++) // TODO: FIX THIS ERROR
+            for (int i=0; i<accounts_ref.Length; i++) // TODO: FIX THIS ERROR
             {
                 if(accounts_ref[i].getAccountNum() == accountNum)
                 {

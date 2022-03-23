@@ -11,21 +11,36 @@ using System.Windows.Forms;
 
 namespace ATM_Team3
 {
-    public partial class BankComputer : Form
+    public partial class BankComputer_form : Form
     {
-
+        private ATM_form atm;
+        
         private Account[] account = new Account[3];
 
-        private ATM_form atm;
-
-        public BankComputer()
+        public BankComputer_form()
         {
+            // Initialize accounts
             account[0] = new Account(300, 1111, 111111);
             account[1] = new Account(750, 2222, 222222);
             account[2] = new Account(3000, 3333, 333333);
 
             InitializeComponent();
             title_lbl.Location = new Point(Width/3, 10);
+
+            initDataGrid();
+        }
+
+        // Initialized data grid with values from account
+        private void initDataGrid()
+        {
+            for(int i=0; i<account.Length; i++)
+            {
+                accountDataGrid.Rows.Add(
+                                        account[i].getAccountNum().ToString(),
+                                        account[i].getBalance().ToString(),
+                                        "0"
+                                        );
+            }
         }
 
         private void startATM_buttonClick(object sender, EventArgs e)
