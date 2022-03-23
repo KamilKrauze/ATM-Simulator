@@ -140,7 +140,7 @@ namespace ATM_Team3
         {
             tmrSuccess.Stop();
             Controls.Remove(lblSuccess);
-            //this.Close();
+            this.Close();
         }
     }
 }
