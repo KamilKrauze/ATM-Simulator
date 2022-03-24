@@ -157,8 +157,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
 
-                //writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
-
+                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
