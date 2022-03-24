@@ -59,5 +59,15 @@ namespace ATM_Team3.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2849811_refresh_arrows_multimedia_media_icon {
+            get {
+                object obj = ResourceManager.GetObject("2849811_refresh_arrows_multimedia_media_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

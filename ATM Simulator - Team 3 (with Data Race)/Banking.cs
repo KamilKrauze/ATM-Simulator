@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -147,12 +148,17 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                 lblSuccess.Text = "Withdrawing...";
                 thisButton.BackColor = Color.Lime;
                 newAmount -= amount;
+                writeLog("Withdrawn £" + amount + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newAmount);
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
+
+                //writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
+
             }
 
             Controls.Add(lblSuccess);
@@ -174,6 +180,30 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 
             Controls.Remove(lblSuccess);
             this.Close();
+        }
+
+        // Writes events to a log file at specific file path
+        private void writeLog(string message)
+        {
+            string fp = @"..\..\logs\log.txt";
+            if (!File.Exists(fp))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
+            else
+            {
+                // Append to existing file
+                using (StreamWriter sw = File.AppendText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
         }
     }
 }

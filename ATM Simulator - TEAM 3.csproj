@@ -56,13 +56,13 @@
     <Compile Include="BankComputer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BankComputer.Designer.cs">
+    <Compile Include="BankComputer.designer.cs">
       <DependentUpon>BankComputer.cs</DependentUpon>
     </Compile>
     <Compile Include="Banking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Banking.Designer.cs">
+    <Compile Include="Banking.designer.cs">
       <DependentUpon>Banking.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

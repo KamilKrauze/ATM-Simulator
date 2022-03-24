@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,7 @@ namespace ATM_Team3
          */
         public Banking_form(Account account)
         {
-            Console.WriteLine("Account: {0}",account.getBalance());
+            Console.WriteLine("Account: {0}", account.getBalance());
 
             // assign account reference to instance variable
             account_ref = account;
@@ -73,9 +74,9 @@ namespace ATM_Team3
             for (int i = 0; i < amounts.Length; i++)
             {
                 btnWithdrawAmounts[i] = new Button();
-                
+
                 btnWithdrawAmounts[i].BackColor = Color.White;
-                btnWithdrawAmounts[i].FlatAppearance.MouseDownBackColor = Color.FromArgb(255,0,192,192);
+                btnWithdrawAmounts[i].FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 0, 192, 192);
                 btnWithdrawAmounts[i].FlatAppearance.MouseOverBackColor = Color.Silver;
                 btnWithdrawAmounts[i].FlatStyle = FlatStyle.Flat;
                 btnWithdrawAmounts[i].Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -85,7 +86,7 @@ namespace ATM_Team3
 
                 // temp variable to send value of button as parameter to event handler
                 int amountArg = amounts[i];
-                btnWithdrawAmounts[i].Click += delegate(object sender, EventArgs e)
+                btnWithdrawAmounts[i].Click += delegate (object sender, EventArgs e)
                 {
                     btnWithdrawAmount_Click(sender, e, amountArg);
                 };
@@ -99,7 +100,7 @@ namespace ATM_Team3
          */
         private void btnViewBalance_Click(object sender, EventArgs e)
         {
-            
+
             //update label
             lblBalance.Text = "Balance:\n£" + account_ref.getBalance().ToString();
 
@@ -147,12 +148,15 @@ namespace ATM_Team3
                 lblSuccess.Text = "Withdrawing...";
                 thisButton.BackColor = Color.Lime;
                 amountToReduce = amount;
+                writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + (account_ref.getBalance() - amountToReduce));
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
+                //writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
@@ -174,6 +178,31 @@ namespace ATM_Team3
 
             Controls.Remove(lblSuccess);
             this.Close();
+        }
+
+        // Writes events to a log file at specific file path
+        private void writeLog(string message)
+        {
+            string fp = @"..\..\logs\log.txt";
+
+            if (!File.Exists(fp))
+            {
+                // Create new file and write message
+                using (StreamWriter sw = File.CreateText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
+            else
+            {
+                // Append message to existing file
+                using (StreamWriter sw = File.AppendText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
         }
     }
 }
