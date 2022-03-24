@@ -156,7 +156,7 @@ namespace ATM_Team3
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
-                //writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
+                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
