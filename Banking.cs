@@ -129,6 +129,14 @@ namespace ATM_Team3
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
+            // put button colours back to default
+            for (int i = 0; i < btnWithdrawAmounts.Length; i++)
+            {
+                btnWithdrawAmounts[i].BackColor = Color.White;
+            }
+
+            Button thisButton = (Button)sender;
+
             // initialise amountToReduce
             amountToReduce = 0;
 
@@ -137,12 +145,14 @@ namespace ATM_Team3
             {
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawing...";
+                thisButton.BackColor = Color.Lime;
                 amountToReduce = amount;
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
+                thisButton.BackColor = Color.Red;
             }
 
             Controls.Add(lblSuccess);
