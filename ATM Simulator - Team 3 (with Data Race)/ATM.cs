@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -170,7 +171,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                         //create new thread for account
                         Thread account_t;
                         bankObj = new Banking_form(accounts_ref_arr[account]);
-
+                        writeLog("Accessing account " + accounts_ref_arr[account].getAccountNum());
                         account_t = new Thread(runBankForm);
                         account_t.Start();
                         input.Clear();
@@ -183,6 +184,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                 {
                     //if too many attempts then shut down
                     MessageBox.Show("All attempts are invalid, temporarily locking system down...");
+                    writeLog("Failed input correct PIN for account " + accounts_ref_arr[account].getAccountNum());
                     attempts = 0;
                     isAccountNoValid = false;
                     input_lbl.Text = "Account No: ";
@@ -237,6 +239,30 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             }
 
             return true;
+        }
+
+        // Writes events to a log file at specific file path
+        private void writeLog(string message)
+        {
+            string fp = @"..\..\logs\log.txt";
+
+            // If file does not exist, create a new text file at that file path and print the message in the file
+            if (!File.Exists(fp))
+            {
+                using (StreamWriter sw = File.CreateText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
+            else // If file does exist, append the message to the text file.
+            {
+                using (StreamWriter sw = File.AppendText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
         }
     }
 }
