@@ -24,8 +24,9 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         // reference to account with which form is open
         Account account_ref;
 
-        // instance variable for new amount
-        int newAmount;
+        // instance variables for balances
+        int newBalance, oldBalance;
+        bool success;
         
         // controls to add and remove as necessary
         Label lblBalance, lblSuccess;
@@ -146,26 +147,25 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 
             Button thisButton = (Button)sender;
 
-            // get balance and assign to instance variable
-            newAmount = account_ref.getBalance();
+            // get balance and assign to instance variables
+            oldBalance = account_ref.getBalance();
+            newBalance = account_ref.getBalance();
             
             // check that account has high enough balance and change success label appropriately
-            if (account_ref.getBalance() >= amount)
+            if (oldBalance >= amount)
             {
+                success = true;
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawing...";
                 thisButton.BackColor = Color.Lime;
-                newAmount -= amount;
-                writeLog("Withdrawn £" + amount + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
-                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newAmount);
+                newBalance -= amount;
             }
             else
             {
+                success = false;
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
-
-                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
@@ -183,7 +183,18 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             tmrSuccess.Stop();
 
             // set account to have new balance
-            account_ref.setBalance(newAmount);
+            account_ref.setBalance(newBalance);
+
+            // write logs
+            if (!success)
+            {
+                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + " due to insufficient funds");
+            }
+            else
+            {
+                writeLog("Withdrawn £" + (oldBalance - newBalance) + " from account " + account_ref.getAccountNum() + " had £" + oldBalance);
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newBalance);
+            }
 
             Controls.Remove(lblSuccess);
             this.Close();
