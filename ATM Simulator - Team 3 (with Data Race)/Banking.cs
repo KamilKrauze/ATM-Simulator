@@ -139,7 +139,8 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawing...";
                 newAmount -= amount;
-                writeLog("Withdrawn £" + newAmount + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog("Withdrawn £" + amount + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newAmount);
             }
             else
             {

@@ -140,6 +140,7 @@ namespace ATM_Team3
                 lblSuccess.Text = "Withdrawing...";
                 amountToReduce = amount;
                 writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + (account_ref.getBalance() - amountToReduce));
             }
             else
             {
