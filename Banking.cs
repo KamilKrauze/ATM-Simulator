@@ -155,15 +155,12 @@ namespace ATM_Team3
                 lblSuccess.Text = "Withdrawing...";
                 thisButton.BackColor = Color.Lime;
                 amountToReduce = amount;
-                writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
-                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + (account_ref.getBalance() - amountToReduce));
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
-                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
@@ -179,6 +176,17 @@ namespace ATM_Team3
         private void hideSuccessLabel(Object sender, EventArgs e)
         {
             tmrSuccess.Stop();
+
+            // write logs
+            if (amountToReduce == 0)
+            {
+                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + " due to insufficient funds");
+            }
+            else
+            {
+                writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + (account_ref.getBalance() - amountToReduce));
+            }
 
             // decrement account balance
             account_ref.decrementBalance(amountToReduce);

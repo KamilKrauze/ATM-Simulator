@@ -156,16 +156,12 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                 lblSuccess.Text = "Withdrawing...";
                 thisButton.BackColor = Color.Lime;
                 newAmount -= amount;
-                writeLog("Withdrawn £" + amount + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
-                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newAmount);
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
                 thisButton.BackColor = Color.Red;
-
-                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
@@ -181,6 +177,17 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         private void hideSuccessLabel(Object sender, EventArgs e)
         {
             tmrSuccess.Stop();
+
+            // write logs
+            if (newAmount == account_ref.getBalance())
+            {
+                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + " due to insufficient funds");
+            }
+            else
+            {
+                writeLog("Withdrawn £" + (account_ref.getBalance() - newAmount) + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newAmount);
+            }
 
             // set account to have new balance
             account_ref.setBalance(newAmount);
