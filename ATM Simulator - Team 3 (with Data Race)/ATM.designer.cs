@@ -54,18 +54,20 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.Title.Font = new System.Drawing.Font("Consolas", 80F);
             this.Title.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Title.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Title.Location = new System.Drawing.Point(12, 9);
+            this.Title.Location = new System.Drawing.Point(8, 6);
+            this.Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(343, 187);
+            this.Title.Size = new System.Drawing.Size(230, 125);
             this.Title.TabIndex = 0;
             this.Title.Text = "ATM";
             // 
             // input
             // 
             this.input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.input.Location = new System.Drawing.Point(32, 216);
+            this.input.Location = new System.Drawing.Point(21, 140);
+            this.input.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(295, 35);
+            this.input.Size = new System.Drawing.Size(198, 26);
             this.input.TabIndex = 1;
             // 
             // input_lbl
@@ -74,12 +76,12 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.input_lbl.Font = new System.Drawing.Font("Consolas", 16F);
             this.input_lbl.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.input_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.input_lbl.Location = new System.Drawing.Point(25, 176);
+            this.input_lbl.Location = new System.Drawing.Point(17, 114);
+            this.input_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.input_lbl.Name = "input_lbl";
-            this.input_lbl.Size = new System.Drawing.Size(125, 37);
+            this.input_lbl.Size = new System.Drawing.Size(84, 26);
             this.input_lbl.TabIndex = 2;
             this.input_lbl.Text = "prompt";
-            this.input_lbl.Click += new System.EventHandler(this.output_Click);
             // 
             // panel1
             // 
@@ -95,9 +97,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(58, 279);
+            this.panel1.Location = new System.Drawing.Point(39, 181);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 340);
+            this.panel1.Size = new System.Drawing.Size(162, 221);
             this.panel1.TabIndex = 3;
             // 
             // buttonClr
@@ -107,9 +110,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.buttonClr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonClr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClr.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.buttonClr.Location = new System.Drawing.Point(0, 255);
+            this.buttonClr.Location = new System.Drawing.Point(0, 166);
+            this.buttonClr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClr.Name = "buttonClr";
-            this.buttonClr.Size = new System.Drawing.Size(77, 80);
+            this.buttonClr.Size = new System.Drawing.Size(51, 52);
             this.buttonClr.TabIndex = 11;
             this.buttonClr.Text = "C";
             this.buttonClr.UseVisualStyleBackColor = false;
@@ -122,9 +126,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.buttonEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonEnter.Location = new System.Drawing.Point(165, 255);
+            this.buttonEnter.Location = new System.Drawing.Point(110, 166);
+            this.buttonEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(77, 80);
+            this.buttonEnter.Size = new System.Drawing.Size(51, 52);
             this.buttonEnter.TabIndex = 10;
             this.buttonEnter.Text = "🢡";
             this.buttonEnter.UseVisualStyleBackColor = false;
@@ -137,9 +142,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button0.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button0.Location = new System.Drawing.Point(82, 255);
+            this.button0.Location = new System.Drawing.Point(55, 166);
+            this.button0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(77, 80);
+            this.button0.Size = new System.Drawing.Size(51, 52);
             this.button0.TabIndex = 9;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = false;
@@ -152,9 +158,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button9.Location = new System.Drawing.Point(165, 169);
+            this.button9.Location = new System.Drawing.Point(110, 110);
+            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(77, 80);
+            this.button9.Size = new System.Drawing.Size(51, 52);
             this.button9.TabIndex = 8;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = false;
@@ -167,9 +174,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button8.Location = new System.Drawing.Point(82, 169);
+            this.button8.Location = new System.Drawing.Point(55, 110);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(77, 80);
+            this.button8.Size = new System.Drawing.Size(51, 52);
             this.button8.TabIndex = 7;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
@@ -182,9 +190,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button7.Location = new System.Drawing.Point(0, 169);
+            this.button7.Location = new System.Drawing.Point(0, 110);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(77, 80);
+            this.button7.Size = new System.Drawing.Size(51, 52);
             this.button7.TabIndex = 6;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
@@ -197,9 +206,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button6.Location = new System.Drawing.Point(165, 84);
+            this.button6.Location = new System.Drawing.Point(110, 55);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 80);
+            this.button6.Size = new System.Drawing.Size(51, 52);
             this.button6.TabIndex = 5;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = false;
@@ -212,9 +222,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button5.Location = new System.Drawing.Point(82, 84);
+            this.button5.Location = new System.Drawing.Point(55, 55);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 80);
+            this.button5.Size = new System.Drawing.Size(51, 52);
             this.button5.TabIndex = 4;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
@@ -227,9 +238,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button4.Location = new System.Drawing.Point(0, 84);
+            this.button4.Location = new System.Drawing.Point(0, 55);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 80);
+            this.button4.Size = new System.Drawing.Size(51, 52);
             this.button4.TabIndex = 3;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
@@ -242,9 +254,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button3.Location = new System.Drawing.Point(165, -1);
+            this.button3.Location = new System.Drawing.Point(110, -1);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 80);
+            this.button3.Size = new System.Drawing.Size(51, 52);
             this.button3.TabIndex = 2;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
@@ -257,9 +270,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.button2.Location = new System.Drawing.Point(82, -1);
+            this.button2.Location = new System.Drawing.Point(55, -1);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 80);
+            this.button2.Size = new System.Drawing.Size(51, 52);
             this.button2.TabIndex = 1;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
@@ -273,8 +287,9 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.button1.Location = new System.Drawing.Point(0, -1);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 80);
+            this.button1.Size = new System.Drawing.Size(51, 52);
             this.button1.TabIndex = 0;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = false;
@@ -282,18 +297,18 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // 
             // ATM_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(361, 645);
+            this.ClientSize = new System.Drawing.Size(241, 419);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.input_lbl);
             this.Controls.Add(this.input);
             this.Controls.Add(this.Title);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "ATM_form";
             this.Text = "ATM";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

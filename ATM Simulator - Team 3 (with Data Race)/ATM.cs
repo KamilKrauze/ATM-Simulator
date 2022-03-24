@@ -160,7 +160,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                 //if not wrong 2 times...
                 if (attempts != 2)
                 {
-                    if (!accounts_ref[account].checkPin(Int32.Parse(input.Text)))
+                    if (!accounts_ref_arr[account].checkPin(Int32.Parse(input.Text)))
                     {
                         //increase attempts
                         attempts++;
@@ -169,7 +169,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                     {
                         //create new thread for account
                         Thread account_t;
-                        bankObj = new Banking_form(accounts_ref[account]);
+                        bankObj = new Banking_form(accounts_ref_arr[account]);
 
                         account_t = new Thread(runBankForm);
                         account_t.Start();

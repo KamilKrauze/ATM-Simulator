@@ -136,13 +136,13 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             if (account_ref.getBalance() >= amount)
             {
                 lblSuccess.ForeColor = Color.LightGreen;
-                lblSuccess.Text = "Withdrawal successful";
+                lblSuccess.Text = "Withdrawing...";
                 newAmount -= amount;
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
-                lblSuccess.Text = "Withdrawal failed";
+                lblSuccess.Text = "Insufficient funds";
             }
 
             Controls.Add(lblSuccess);

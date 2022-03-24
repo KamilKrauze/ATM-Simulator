@@ -22,7 +22,10 @@ namespace ATM_Team3
     {
         // reference to account with which form is open
         Account account_ref;
-        
+
+        // instance variable for amount to reduce
+        int amountToReduce;
+
         // controls to add and remove as necessary
         Label lblBalance, lblSuccess;
         Button[] btnWithdrawAmounts;
@@ -126,16 +129,20 @@ namespace ATM_Team3
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
-            // decrement balance and change success label depending on success
-            if (account_ref.decrementBalance(amount))
+            // initialise amountToReduce
+            amountToReduce = 0;
+
+            // check that account has high enough balance and change success label appropriately
+            if (account_ref.getBalance() >= amount)
             {
                 lblSuccess.ForeColor = Color.LightGreen;
-                lblSuccess.Text = "Withdrawal successful";
+                lblSuccess.Text = "Withdrawing...";
+                amountToReduce = amount;
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
-                lblSuccess.Text = "Withdrawal failed";
+                lblSuccess.Text = "Insufficient funds";
             }
 
             Controls.Add(lblSuccess);
@@ -151,6 +158,10 @@ namespace ATM_Team3
         private void hideSuccessLabel(Object sender, EventArgs e)
         {
             tmrSuccess.Stop();
+
+            // decrement account balance
+            account_ref.decrementBalance(amountToReduce);
+
             Controls.Remove(lblSuccess);
             this.Close();
         }
