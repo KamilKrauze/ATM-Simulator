@@ -91,11 +91,13 @@ namespace ATM_Team3
             }
         }
 
+        // Update list box with lines from the log.txt file found at ./logs/log.txt
         private void updateListBox()
         {
             eventLog_listBox.Items.Clear();
             string fp = @"..\..\logs\log.txt";
 
+            // If file does exist, update the list box
             if (File.Exists(fp))
             {
                 // Open the file to read from.
@@ -109,9 +111,8 @@ namespace ATM_Team3
                     sr.Close();
                 }
             }
-            else
+            else // If file does not exist, create a new file in that filepath
             {
-                // Create a file to write to.
                 using (StreamWriter sw = File.CreateText(fp))
                 {
                     sw.WriteLine("");

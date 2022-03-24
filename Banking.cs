@@ -169,6 +169,7 @@ namespace ATM_Team3
             this.Close();
         }
 
+        // Writes events to a log file at specific file path
         private void writeLog(string message)
         {
             string fp = @"..\..\logs\log.txt";

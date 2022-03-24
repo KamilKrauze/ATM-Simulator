@@ -248,6 +248,7 @@ namespace ATM_Team3
         {
             string fp = @"..\..\logs\log.txt";
 
+            // If file does not exist, create a new text file at that file path and print the message in the file
             if(!File.Exists(fp))
             {
                 using (StreamWriter sw = File.CreateText(fp))
@@ -256,7 +257,7 @@ namespace ATM_Team3
                     sw.Close();
                 }
             }
-            else
+            else // If file does exist, append the message to the text file.
             {
                 using (StreamWriter sw = File.AppendText(fp))
                 {

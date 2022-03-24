@@ -17,6 +17,7 @@ namespace ATM_Team3
 {
     class Program
     {
+        // Reset log file when program is ran
         public static void createFile()
         {
             string fp = @"..\..\logs\log.txt";
