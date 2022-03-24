@@ -17,19 +17,19 @@ namespace ATM_Team3
 {
     class Program
     {
-        // Reset log file when program is ran
+        // Create an empty file or make existing file blank
         public static void createFile()
         {
             string fp = @"..\..\logs\log.txt";
 
             if (File.Exists(fp))
             {
-                File.WriteAllText(fp, string.Empty);
+                File.WriteAllText(fp, string.Empty); // Make existing file blank
                 return;
             }
             else
             {
-                File.CreateText(fp);
+                File.CreateText(fp); // Create new file
                 return;
             }
         }
