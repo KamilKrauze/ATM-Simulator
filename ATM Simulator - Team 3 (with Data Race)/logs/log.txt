@@ -1,9 +1,6 @@
 Accessing account 111111
+Withdrawn £20 from account 111111 had £300
+111111: New Balance --> £280
 Accessing account 111111
-Withdrawn £100 from account 111111 had £300
-111111: New Balance --> £200
-Withdrawn £100 from account 111111 had £300
-111111: New Balance --> £200
-Accessing account 111111
-Withdrawn £100 from account 111111 had £200
-111111: New Balance --> £100
+Withdrawn £50 from account 111111 had £280
+111111: New Balance --> £230
