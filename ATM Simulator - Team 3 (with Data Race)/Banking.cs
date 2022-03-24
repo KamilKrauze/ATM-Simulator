@@ -130,6 +130,14 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
          */
         private void btnWithdrawAmount_Click(object sender, EventArgs e, int amount)
         {
+            // put button colours back to default
+            for (int i = 0; i < btnWithdrawAmounts.Length; i++)
+            {
+                btnWithdrawAmounts[i].BackColor = Color.White;
+            }
+
+            Button thisButton = (Button)sender;
+
             // get balance and assign to instance variable
             newAmount = account_ref.getBalance();
             
@@ -138,6 +146,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             {
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawing...";
+                thisButton.BackColor = Color.Lime;
                 newAmount -= amount;
                 writeLog("Withdrawn £" + amount + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
                 writeLog(account_ref.getAccountNum() + ": New Balance --> £" + newAmount);
@@ -146,7 +155,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
-                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
+                thisButton.BackColor = Color.Red;
+
+                //writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
+
             }
 
             Controls.Add(lblSuccess);
