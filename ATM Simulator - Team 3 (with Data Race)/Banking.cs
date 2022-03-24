@@ -24,7 +24,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         // reference to account with which form is open
         Account account_ref;
 
-        // instance variable for balances
+        // instance variables for balances
         int newBalance, oldBalance;
         bool success;
         

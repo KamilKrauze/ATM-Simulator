@@ -177,19 +177,18 @@ namespace ATM_Team3
         {
             tmrSuccess.Stop();
 
-            // write logs
-            if (amountToReduce == 0)
+            int oldBalance = account_ref.getBalance();
+
+            // decrement account balance and write logs
+            if (!account_ref.decrementBalance(amountToReduce))
             {
                 writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + " due to insufficient funds");
             }
             else
             {
-                writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
-                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + (account_ref.getBalance() - amountToReduce));
+                writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + oldBalance);
+                writeLog(account_ref.getAccountNum() + ": New Balance --> £" + account_ref.getBalance());
             }
-
-            // decrement account balance
-            account_ref.decrementBalance(amountToReduce);
 
             Controls.Remove(lblSuccess);
             this.Close();
