@@ -26,8 +26,6 @@ namespace ATM_Team3
         private bool isAccountNoValid;
         private int attempts;
         private Banking_form bankObj;
-
-        private int ATMcount;
         
         /**
          * Contructor method for ATM form

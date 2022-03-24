@@ -38,6 +38,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // btnViewBalance
             // 
             this.btnViewBalance.BackColor = System.Drawing.Color.White;
+            this.btnViewBalance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewBalance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnViewBalance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnViewBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -64,6 +65,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // btnWithdraw
             // 
             this.btnWithdraw.BackColor = System.Drawing.Color.White;
+            this.btnWithdraw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWithdraw.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnWithdraw.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

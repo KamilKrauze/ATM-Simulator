@@ -107,6 +107,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // buttonClr
             // 
             this.buttonClr.BackColor = System.Drawing.Color.White;
+            this.buttonClr.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonClr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonClr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -123,6 +124,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // buttonEnter
             // 
             this.buttonEnter.BackColor = System.Drawing.Color.White;
+            this.buttonEnter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEnter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.buttonEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -139,6 +141,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button0
             // 
             this.button0.BackColor = System.Drawing.Color.White;
+            this.button0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,6 +158,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -171,6 +175,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -187,6 +192,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -203,6 +209,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,6 +226,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -235,6 +243,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -251,6 +260,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -267,6 +277,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -283,6 +294,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

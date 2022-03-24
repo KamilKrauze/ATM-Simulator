@@ -93,6 +93,13 @@ namespace ATM_Team3
 
                 buttonHeight += 55;
             }
+
+            // Change cursor icon when on buttons - https://stackoverflow.com/questions/7155569/how-to-set-the-hand-cursor-on-a-mouse-move-for-all-buttons-in-c - 24/03/2022
+            foreach (Button btn in btnWithdrawAmounts) 
+            {
+                btn.MouseEnter += (s, e) => btn.Cursor = Cursors.Hand;
+                btn.MouseLeave += (s, e) => btn.Cursor = Cursors.Arrow;
+            }
         }
 
         /**
