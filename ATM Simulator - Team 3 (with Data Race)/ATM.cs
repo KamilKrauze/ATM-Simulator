@@ -24,7 +24,6 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         private Account[] accounts_ref_arr;
         private int account;
         private bool isAccountNoValid;
-        private int attempts;
         private Banking_form bankObj;
 
         /**
@@ -35,7 +34,6 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.accounts_ref_arr = account;
             this.account = -1;
             this.isAccountNoValid = false;
-            this.attempts = 0;
 
             InitializeComponent();
             this.Text = "ATM";
@@ -158,38 +156,30 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
                     MessageBox.Show("Please enter a 4 digit (ie. 1234) PIN");
                     return;
                 }
-                //if not wrong 2 times...
-                if (attempts != 2)
+
+                // Display account details if account PIN is valid
+                if (accounts_ref_arr[account].checkPin(Int32.Parse(input.Text)))
                 {
-                    if (!accounts_ref_arr[account].checkPin(Int32.Parse(input.Text)))
-                    {
-                        //increase attempts
-                        attempts++;
-                    }
-                    else
-                    {
-                        //create new thread for account
-                        Thread account_t;
-                        bankObj = new Banking_form(accounts_ref_arr[account]);
-                        writeLog("Accessing account " + accounts_ref_arr[account].getAccountNum());
-                        account_t = new Thread(runBankForm);
-                        account_t.Start();
-                        input.Clear();
-                        //change label
-                        input_lbl.Text = "Account No: ";
-                        isAccountNoValid = false;
-                    }
+                    //create new thread for account
+                    Thread account_t;
+                    bankObj = new Banking_form(accounts_ref_arr[account]);
+                    writeLog("Accessing account " + accounts_ref_arr[account].getAccountNum());
+                    account_t = new Thread(runBankForm);
+                    account_t.Start();
+                    input.Clear();
+                    //change label
+                    input_lbl.Text = "Account No: ";
+                    isAccountNoValid = false;
                 }
-                else
+                else // Display error and close ATM temporarily
                 {
-                    //if too many attempts then shut down
                     MessageBox.Show("All attempts are invalid, temporarily locking system down...");
                     writeLog("Failed input correct PIN for account " + accounts_ref_arr[account].getAccountNum());
-                    attempts = 0;
                     isAccountNoValid = false;
                     input_lbl.Text = "Account No: ";
                     input.Clear();
-                    Thread.Sleep(3000);
+                    Thread.Sleep(1500);
+                    this.Close();
                 }
             }
             else
