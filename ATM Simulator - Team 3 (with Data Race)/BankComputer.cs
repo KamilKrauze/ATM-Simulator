@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,8 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
 {
     public partial class BankComputer_form : Form
     {
-        private ATM_form atm;
 
+        private ATM_form atm;
         private Account[] account = new Account[3];
 
         // Initializes variables
@@ -51,6 +52,7 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
         private void refresh_button_Click(object sender, EventArgs e)
         {
             updateDataGrid();
+            updateListBox();
         }
 
         // When the form is focused/pressed on, an event fires this function to update the DataGrid
@@ -86,6 +88,36 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             {
                 accountDataGrid.Rows[i].Cells["AccountNo"].Value = account[i].getAccountNum().ToString();
                 accountDataGrid.Rows[i].Cells["Balance"].Value = account[i].getBalance().ToString();
+            }
+        }
+
+        // Update list box with lines from the log.txt file found at ./logs/log.txt
+        private void updateListBox()
+        {
+            eventLog_listBox.Items.Clear();
+            string fp = @"..\..\logs\log.txt";
+
+            // If file does exist, update the list box
+            if (File.Exists(fp))
+            {
+                // Open the file to read from.
+                using (StreamReader sr = File.OpenText(fp))
+                {
+                    string s;
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        eventLog_listBox.Items.Add(s);
+                    }
+                    sr.Close();
+                }
+            }
+            else // If file does not exist, create a new file in that filepath
+            {
+                using (StreamWriter sw = File.CreateText(fp))
+                {
+                    sw.WriteLine("");
+                    sw.Close();
+                }
             }
         }
     }
