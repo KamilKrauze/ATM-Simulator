@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,8 @@ namespace ATM_Team3
 {
     public partial class BankComputer_form : Form
     {
-        private ATM_form atm;
 
+        private ATM_form atm;
         private Account[] account = new Account[3];
 
         // Initializes variables
@@ -51,6 +52,7 @@ namespace ATM_Team3
         private void refresh_button_Click(object sender, EventArgs e)
         {
             updateDataGrid();
+            updateListBox();
         }
 
         // When the form is focused/pressed on, an event fires this function to update the DataGrid
@@ -86,6 +88,35 @@ namespace ATM_Team3
             {
                 accountDataGrid.Rows[i].Cells["AccountNo"].Value = account[i].getAccountNum().ToString();
                 accountDataGrid.Rows[i].Cells["Balance"].Value = account[i].getBalance().ToString();
+            }
+        }
+
+        private void updateListBox()
+        {
+            eventLog_listBox.Items.Clear();
+            string fp = @"..\..\logs\log.txt";
+
+            if (File.Exists(fp))
+            {
+                // Open the file to read from.
+                using (StreamReader sr = File.OpenText(fp))
+                {
+                    string s;
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        eventLog_listBox.Items.Add(s);
+                    }
+                    sr.Close();
+                }
+            }
+            else
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(fp))
+                {
+                    sw.WriteLine("");
+                    sw.Close();
+                }
             }
         }
     }

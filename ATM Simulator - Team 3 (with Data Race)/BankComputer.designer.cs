@@ -32,10 +32,10 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.title_lbl = new System.Windows.Forms.Label();
             this.StartATM_button = new System.Windows.Forms.Button();
             this.accountDataGrid = new System.Windows.Forms.DataGridView();
-            this.accountView_lbl = new System.Windows.Forms.Label();
-            this.refresh_button = new System.Windows.Forms.Button();
             this.AccountNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountView_lbl = new System.Windows.Forms.Label();
+            this.refresh_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,10 +45,9 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.title_lbl.AutoSize = true;
             this.title_lbl.Font = new System.Drawing.Font("Gill Sans MT", 22F, System.Drawing.FontStyle.Bold);
             this.title_lbl.ForeColor = System.Drawing.Color.White;
-            this.title_lbl.Location = new System.Drawing.Point(323, 6);
-            this.title_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title_lbl.Location = new System.Drawing.Point(479, 9);
             this.title_lbl.Name = "title_lbl";
-            this.title_lbl.Size = new System.Drawing.Size(319, 42);
+            this.title_lbl.Size = new System.Drawing.Size(471, 61);
             this.title_lbl.TabIndex = 0;
             this.title_lbl.Text = "Bank Main Computer";
             this.title_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,10 +61,9 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.StartATM_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.StartATM_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.StartATM_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartATM_button.Location = new System.Drawing.Point(737, 71);
-            this.StartATM_button.Margin = new System.Windows.Forms.Padding(2);
+            this.StartATM_button.Location = new System.Drawing.Point(1096, 116);
             this.StartATM_button.Name = "StartATM_button";
-            this.StartATM_button.Size = new System.Drawing.Size(171, 44);
+            this.StartATM_button.Size = new System.Drawing.Size(256, 68);
             this.StartATM_button.TabIndex = 1;
             this.StartATM_button.Text = "Start ATM";
             this.StartATM_button.UseVisualStyleBackColor = false;
@@ -79,19 +77,40 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.AccountNo,
             this.Balance});
             this.accountDataGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.accountDataGrid.Location = new System.Drawing.Point(13, 71);
+            this.accountDataGrid.Location = new System.Drawing.Point(20, 109);
+            this.accountDataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.accountDataGrid.Name = "accountDataGrid";
-            this.accountDataGrid.Size = new System.Drawing.Size(719, 368);
+            this.accountDataGrid.RowHeadersWidth = 62;
+            this.accountDataGrid.Size = new System.Drawing.Size(1078, 566);
             this.accountDataGrid.TabIndex = 4;
+            // 
+            // AccountNo
+            // 
+            this.AccountNo.HeaderText = "Account Number";
+            this.AccountNo.MinimumWidth = 8;
+            this.AccountNo.Name = "AccountNo";
+            this.AccountNo.ReadOnly = true;
+            this.AccountNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.AccountNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Balance
+            // 
+            this.Balance.HeaderText = "Account Balance";
+            this.Balance.MinimumWidth = 8;
+            this.Balance.Name = "Balance";
+            this.Balance.ReadOnly = true;
+            this.Balance.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Balance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // accountView_lbl
             // 
             this.accountView_lbl.AutoSize = true;
             this.accountView_lbl.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountView_lbl.ForeColor = System.Drawing.Color.White;
-            this.accountView_lbl.Location = new System.Drawing.Point(13, 52);
+            this.accountView_lbl.Location = new System.Drawing.Point(20, 80);
+            this.accountView_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.accountView_lbl.Name = "accountView_lbl";
-            this.accountView_lbl.Size = new System.Drawing.Size(101, 18);
+            this.accountView_lbl.Size = new System.Drawing.Size(154, 29);
             this.accountView_lbl.TabIndex = 5;
             this.accountView_lbl.Text = "Accounts View";
             // 
@@ -103,46 +122,30 @@ namespace ATM_Simulator___Team_3__with_Data_Race_
             this.refresh_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.refresh_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.refresh_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refresh_button.Location = new System.Drawing.Point(832, 364);
+            this.refresh_button.Location = new System.Drawing.Point(1248, 560);
+            this.refresh_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.refresh_button.Name = "refresh_button";
-            this.refresh_button.Size = new System.Drawing.Size(75, 75);
+            this.refresh_button.Size = new System.Drawing.Size(112, 115);
             this.refresh_button.TabIndex = 6;
             this.refresh_button.Text = "Refresh";
             this.refresh_button.UseVisualStyleBackColor = false;
             this.refresh_button.Click += new System.EventHandler(this.refresh_button_Click);
             // 
-            // AccountNo
-            // 
-            this.AccountNo.HeaderText = "Account Number";
-            this.AccountNo.Name = "AccountNo";
-            this.AccountNo.ReadOnly = true;
-            this.AccountNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.AccountNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Balance
-            // 
-            this.Balance.HeaderText = "Account Balance";
-            this.Balance.Name = "Balance";
-            this.Balance.ReadOnly = true;
-            this.Balance.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Balance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // BankComputer_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(919, 451);
+            this.ClientSize = new System.Drawing.Size(1370, 668);
             this.Controls.Add(this.refresh_button);
             this.Controls.Add(this.accountView_lbl);
             this.Controls.Add(this.accountDataGrid);
             this.Controls.Add(this.StartATM_button);
             this.Controls.Add(this.title_lbl);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(935, 490);
-            this.MinimumSize = new System.Drawing.Size(625, 490);
+            this.MaximumSize = new System.Drawing.Size(1392, 724);
+            this.MinimumSize = new System.Drawing.Size(926, 724);
             this.Name = "BankComputer_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bank Main Computer";

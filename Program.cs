@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,9 +17,27 @@ namespace ATM_Team3
 {
     class Program
     {
+        public static void createFile()
+        {
+            string fp = @"..\..\logs\log.txt";
+
+            if (File.Exists(fp))
+            {
+                File.WriteAllText(fp, string.Empty);
+                return;
+            }
+            else
+            {
+                File.CreateText(fp);
+                return;
+            }
+        }
+
         [STAThread]
         static void Main()
         {
+            createFile(); // Resets the log file when app runs.
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new BankComputer_form());

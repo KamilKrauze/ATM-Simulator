@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -138,11 +139,13 @@ namespace ATM_Team3
                 lblSuccess.ForeColor = Color.LightGreen;
                 lblSuccess.Text = "Withdrawing...";
                 amountToReduce = amount;
+                writeLog("Withdrawn £" + amountToReduce + " from account " + account_ref.getAccountNum() + " had £" + account_ref.getBalance());
             }
             else
             {
                 lblSuccess.ForeColor = Color.IndianRed;
                 lblSuccess.Text = "Insufficient funds";
+                writeLog("Failed to withdraw from account " + account_ref.getAccountNum() + "due to insufficient funds");
             }
 
             Controls.Add(lblSuccess);
@@ -164,6 +167,29 @@ namespace ATM_Team3
 
             Controls.Remove(lblSuccess);
             this.Close();
+        }
+
+        private void writeLog(string message)
+        {
+            string fp = @"..\..\logs\log.txt";
+            if (!File.Exists(fp))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
+            else
+            {
+                // Append to existing file
+                using (StreamWriter sw = File.AppendText(fp))
+                {
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            }
         }
     }
 }
